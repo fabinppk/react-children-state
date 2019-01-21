@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,900');
+@import 'assets/scss/_variaveis';
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #1F1F1F;
+
+  * {
+    font-family: 'Lato', sans-serif;
+  }
+
+  .titulo-pagina {
+    color: #424242;
+  }
+
+  .block-cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4% 0;
+  }
+
+  .block-page {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 1px 1px 9px -3px;
+    width: calc(90% - 50px);
+    border: 2px #e8e8e8;
+    border-style: dotted;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 5%;
+
+    .usuarios {
+      font-size: 15px;
+      color: #424242;
+      text-decoration: none;
+      transition: color ease .3s;
+
+      .nome {
+        margin: 5px 0;
+      }
+
+      &:hover {
+        color: $hover-text;
+      }
+    }
+  }
+}
