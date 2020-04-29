@@ -1,27 +1,22 @@
-import Head from "next/head";
-import Link from "next/link";
 import "isomorphic-fetch";
 import Navbar from "components/Navbar";
 import Card from "components/Card";
 import "assets/scss/style.scss";
-import NextSeo from 'next-seo';
-import { logPageView, initGA } from 'components/Analytics/index';
+import { NextSeo } from "next-seo";
+import { logPageView, initGA } from "components/Analytics/index";
 
 export default class Index extends React.Component {
-
-  componentDidMount () {
+  componentDidMount() {
     initGA();
     logPageView();
   }
 
-  render () {
+  render() {
     return (
       <section className="page-section">
         <NextSeo
-          config={{
-            title: 'Produtos disponíveis',
-            description: 'Lista de produtos disponíveis para venda.'
-          }}
+          title="Produtos disponíveis"
+          description="Lista de produtos disponíveis para venda."
         />
         <Navbar />
         <div className="block-cards">
@@ -37,8 +32,7 @@ export default class Index extends React.Component {
             preco="R$ 50,00"
           />
         </div>
-
       </section>
-    )
+    );
   }
 }
